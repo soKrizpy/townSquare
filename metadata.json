@@ -1,0 +1,6 @@
+{
+  "name": "bits2bytes - Cyber Town Square & Pet Sanctuary",
+  "description": "Gamified coding & 3D learning platform for kids with cyber town square micro-groups, avatar wardrobe shop, and Digimon-style cyber-pet egg companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

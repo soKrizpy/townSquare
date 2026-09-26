@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .cyber-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(6, 182, 212, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(6, 182, 212, 0.07) 1px, transparent 1px);
+  }
+
+  .cyber-grid-dense {
+    background-size: 16px 16px;
+    background-image: 
+      linear-gradient(to right, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.45);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 25px -4px rgba(168, 85, 247, 0.45);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 25px -4px rgba(234, 179, 8, 0.45);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes eggPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.5));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 28px rgba(168, 85, 247, 0.7));
+  }
+}
+
+@keyframes eggWobble {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-8deg) scale(1.05); }
+  40% { transform: rotate(8deg) scale(1.05); }
+  60% { transform: rotate(-4deg) scale(1.02); }
+  80% { transform: rotate(4deg) scale(1.01); }
+}
+
+@keyframes feedSparkle {
+  0% { transform: scale(0.6) translateY(20px); opacity: 0; }
+  50% { transform: scale(1.2) translateY(-10px); opacity: 1; }
+  100% { transform: scale(1) translateY(-30px); opacity: 0; }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-egg-pulse {
+  animation: eggPulse 3s ease-in-out infinite;
+}
+
+.animate-egg-wobble {
+  animation: eggWobble 0.6s ease-in-out;
+}
+
+.animate-feed-sparkle {
+  animation: feedSparkle 1.2s ease-out forwards;
+}
+
